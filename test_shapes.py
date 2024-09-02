@@ -22,6 +22,10 @@ class TestRectangleMethods(unittest.TestCase):
         rectangle_with_zero = Rectangle(name="ZeroRectangle", width=0, height=5)
         result = rectangle_with_zero.area()
         self.assertEqual(result, 0)  # 0 * 5 = 0
+        
+    def test_perimeter(self):
+        result = self.rectangle.perimeter()
+        self.assertEqual(result,14)
 
 class TestCircleMethods(unittest.TestCase):
 
@@ -40,6 +44,11 @@ class TestCircleMethods(unittest.TestCase):
         circle_with_zero_radius = Circle(name="ZeroCircle", radius=0)
         result = circle_with_zero_radius.area()
         self.assertEqual(result, 0)
+        
+    def test_perimeter(self):
+        result = self.circle.perimeter()
+        expected_area = math.pi * 5 * 2
+        self.assertEqual(result, expected_area)
 
 if __name__ == '__main__':
     unittest.main()

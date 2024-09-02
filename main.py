@@ -10,6 +10,8 @@ class Shape:
 
     def area(self):
         pass
+    def perimeter(self):
+        pass
 
 class Rectangle(Shape):
     def __init__(self, name, width, height):
@@ -19,6 +21,9 @@ class Rectangle(Shape):
 
     def area(self):
         return self.width * self.height
+    
+    def perimeter(self):
+        return (2 * self.width) + (2 * self.height)
 
 class Circle(Shape):
     def __init__(self, name, radius):
@@ -27,4 +32,6 @@ class Circle(Shape):
 
     def area(self):
         return math.pi * (self.radius ** 2)
+    def perimeter(self):
+        return (2 * math.pi * self.radius)
 
