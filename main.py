@@ -12,6 +12,14 @@ class Shape:
         pass
     def perimeter(self):
         pass
+    def compare_area(self, other_shape):
+        if self.area() > other_shape.area():
+            return f"{self.name} has a larger area than {other_shape.name}."
+        elif self.area() < other_shape.area():
+            return f"{other_shape.name} has a larger area than {self.name}."
+        else:
+            return f"{self.name} and {other_shape.name} have the same area."
+
 
 class Rectangle(Shape):
     def __init__(self, name, width, height):
